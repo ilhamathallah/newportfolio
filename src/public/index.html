@@ -1,0 +1,443 @@
+<!doctype html>
+<html class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ilham athallah - Portfolio</title>
+    <link rel="icon" href="/src/public/img/icons8-briefcase-100.png">
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <style type="text/tailwindcss">
+        body {
+                font-family: 'Poppins', sans-serif;
+            }
+
+            .hamburger-line {
+                @apply w-[18px] h-[2px] my-1 block bg-dark;
+            }
+
+            .hamburger-active > span:nth-child(1) {
+                @apply rotate-45;
+            }
+
+            .hamburger-active > span:nth-child(2) {
+                @apply scale-0;
+            }
+
+            .hamburger-active > span:nth-child(3) {
+                @apply -rotate-45;
+            }
+
+        </style>
+    <!-- Boxicons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Text Color -->
+    <script>
+        tailwind.config = {
+            theme: {
+                container: {
+                    center: true,
+                    padding: '16px',
+                },
+                extend: {
+                    colors: {
+                        primary: '#2563EB',
+                        dark: '#0f172a',
+                        secondary: '#64748b',
+                    },
+                    screens: {
+                        '2xl': '1230px',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div id="loader" class="loader flex items-center justify-center">
+        <img src="/src/public/img/coffee cup gif.gif" alt="Loading..." class="w-16 h-16">
+    </div>
+
+    <div id="content" class="hidden">
+        <!-- Konten Anda di sini -->
+        <h1 class="text-2xl">Konten Telah Dimuat</h1>
+    </div>
+    <!-- Header -->
+    <header class="bg-transparent fixed bg-white drop-shadow-sm top-0 left-0 w-full flex items-center z-10">
+        <div class="container">
+            <div class="flex items-center justify-between relative">
+                <div class="px-4">
+                    <a href="#home" class="font-bold text-lg text-primary block py-6 tracking-wide">Ilham Athallah</a>
+                </div>
+                <div class="flex items-center px-4">
+                    <button id="hamburger" name="hamburger" type="button" class="block absolute right-4 lg:hidden">
+                        <span class="hamburger-line transition duration-300 ease-in-out origin-top-left"></span>
+                        <span class="hamburger-line transition duration-300 ease-in-out"></span>
+                        <span class="hamburger-line transition duration-300 ease-in-out origin-bottom-left"></span>
+                    </button>
+
+                    <!-- Navbar -->
+                    <nav id="nav-menu"
+                        class="hidden absolute py-5 bg-white shadow-sm rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:rounded-none lg:shadow-none">
+                        <ul class="block lg:flex">
+                            <li class="group">
+                                <a class="text-base text-dark py-2 mx-5 group-hover:text-primary flex"
+                                    href="#home">Home</a>
+                            </li>
+                            <li class="group">
+                                <a class="text-base text-dark py-2 mx-5 group-hover:text-primary flex"
+                                    href="#about">About Me</a>
+                            </li>
+                            <li class="group">
+                                <a class="text-base text-dark py-2 mx-5 group-hover:text-primary flex"
+                                    href="#skill">Skills</a>
+                            </li>
+                            <li class="group">
+                                <a class="text-base text-dark py-2 mx-5 group-hover:text-primary flex"
+                                    href="#portfolio">Portfolio</a>
+                            </li>
+                            <li class="group">
+                                <a class="text-base text-dark py-2 mx-5 group-hover:text-primary flex"
+                                    href="#kontak">Contact</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <!-- /Navbar -->
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- /Header -->
+
+    <!-- Home -->
+    <section id="home" class="pt-36">
+        <div class="container">
+            <div class="flex flex-wrap">
+                <div class="w-full self-center px-4 lg:w-1/2">
+                    <h1 class="text-base font-medium text-primary"><span
+                            class="block font-bold text-dark text-3xl mt-1 lg:text-4xl">Ilham Athallah</span></h1>
+                    <h2 class="font-medium text-slate-500 text-lg mb-5 mt-3"><span class="typewriter"
+                            id="typewriter"></span></h2>
+                    <p class="font-normal text-secondary mb-10 leading-relaxed">A Junior Software Engineer specializing
+                        in software development, responsive web application development, and API integration. I have
+                        expertise in creating efficient and high-performance software solutions with a focus on optimal
+                        user experience.</p>
+                    <a href="#"
+                        class="text-base font-semibold text-white bg-primary py-3 px-8 rounded-full hover:shadow-lg hover:opacity-90 transition duration-300 ease-in-out"
+                        download="">Download CV</a>
+                </div>
+                <div class="w-full self-end px-4 lg:w-1/2">
+                    <div class="mt-10 lg:mt-8 lg:right-0">
+                        <img src="dist/img/profile.png" alt="Photo profile" class="max-w-full mx-auto w-96">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /Home -->
+
+    <!-- About -->
+    <section id="about" class="pt-36 pb-32">
+        <div class="container">
+            <div class="flex flex-wrap">
+                <div class="w-full px-4 mb-5 lg:w-1/2">
+                    <h4 class="text-base font-medium text-primary mb-2">About Me</h4>
+                    <h2 class="font-bold text-dark text-2xl lg:text-3xl mb-5">Junior Software Enggineer</h2>
+                    <p class="font-normal text-secondary mb-5 leading-relaxed max-w-xl">My name is Ilham athallah, and
+                        I am a vocational student majoring in RPL at IDN Boarding School Sentul. I have
+                        enthusiasm for my field of study and always strive to give my best in every project and
+                        assignment I do.
+                        my best in every project and assignment I do.</p>
+                </div>
+                <div class="w-full px-4 lg:w-1/2">
+                    <h3 class="font-bold text-dark text-xl lg:text-2xl mb-5 lg:pt-8">Let's be friends</h3>
+                    <p class="font-normal text-secondary mb-4 leading-relaxed">Find me on various social media
+                    </p>
+                    <div class="flex items-center">
+                        <!-- Youtube -->
+                        <a href="" target="_blank"
+                            class="w-10 h-10 mr-2 rounded-full flex justify-center items-center text-slate-500 border border-slate-300 hover:border-primary hover:bg-primary hover:text-white duration-300 ease-in-out">
+                            <i class='bx bxl-youtube fill-current text-2xl'></i>
+                        </a>
+                        <!-- Linkedin -->
+                        <a href="https://www.linkedin.com/in/ilham-athallah-741541284/" target="_blank"
+                            class="w-10 h-10 mr-2 rounded-full flex justify-center items-center text-slate-500 border border-slate-300 hover:border-primary hover:bg-primary hover:text-white duration-300 ease-in-out">
+                            <i class='bx bxl-linkedin fill-current text-2xl'></i>
+                        </a>
+                        <!-- Instagram -->
+                        <a href="" target="_blank"
+                            class="w-10 h-10 mr-2 rounded-full flex justify-center items-center text-slate-500 border border-slate-300 hover:border-primary hover:bg-primary hover:text-white duration-300 ease-in-out">
+                            <i class='bx bxl-instagram-alt fill-current text-2xl'></i>
+                        </a>
+                        <!-- Github -->
+                        <a href="" target="_blank"
+                            class="w-10 h-10 mr-2 rounded-full flex justify-center items-center text-slate-500 border border-slate-300 hover:border-primary hover:bg-primary hover:text-white duration-300 ease-in-out">
+                            <i class='bx bxl-github fill-current text-2xl'></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /About -->
+
+    <!-- Skills -->
+    <section id="skill" class="pt-36 pb-16">
+        <div class="container">
+            <div class="w-full px-4">
+                <div class="max-w-xl mx-auto text-center mb-16">
+                    <h4 class="text-base font-medium text-primary mb-2">Skills</h4>
+                    <h2 class="font-bold text-dark text-2xl lg:text-3xl mb-5">Programming Languages</h2>
+                </div>
+            </div>
+            <div class="flex flex-wrap justify-center items-center">
+                <!-- Skill Item -->
+                <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-4 mb-8">
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <div class="mb-4">
+                            <img src="/src/public/img/html.png" alt="HTML" class="mx-auto w-16">
+                        </div>
+                        <h3 class="font-bold text-dark text-lg mb-3 text-center">HTML</h3>
+                    </div>
+                </div>
+                <!-- Skill Item -->
+                <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-4 mb-8">
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <div class="mb-4">
+                            <img src="/src/public/img/css.png" alt="CSS" class="mx-auto w-16">
+                        </div>
+                        <h3 class="font-bold text-dark text-lg mb-3 text-center">CSS</h3>
+                    </div>
+                </div>
+                <!-- Skill Item -->
+                <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-4 mb-8">
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <div class="mb-4">
+                            <img src="/src/public/img/javascript.png" alt="Javascript" class="mx-auto w-16">
+                        </div>
+                        <h3 class="font-bold text-dark text-lg mb-3 text-center">Javascript</h3>
+                    </div>
+                </div>
+                <!-- Skill Item -->
+                <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-4 mb-8">
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <div class="mb-4">
+                            <img src="/src/public/img/bootstrap-framework-logo.png" alt="Bootstrap"
+                                class="mx-auto w-16">
+                        </div>
+                        <h3 class="font-bold text-dark text-lg mb-3 text-center">Bootstrap</h3>
+                    </div>
+                </div>
+                <!-- Skill Item -->
+                <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-4 mb-8">
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <div class="mb-4">
+                            <img src="img/tailwind.png" alt="Tailwindcss" class="mx-auto w-16">
+                        </div>
+                        <h3 class="font-bold text-dark text-lg mb-3 text-center">Tailwindcss</h3>
+                    </div>
+                </div>
+                <!-- Skill Item -->
+                <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-4 mb-8">
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <div class="mb-4">
+                            <img src="/src/public/img/laravel-framework-logo.png" alt="Laravel" class="mx-auto w-16">
+                        </div>
+                        <h3 class="font-bold text-dark text-lg mb-3 text-center">Laravel</h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- desaign -->
+            <div class="w-full px-4">
+                <div class="max-w-xl mx-auto text-center mb-16">
+                    <h2 class="font-bold text-dark text-2xl lg:text-3xl mb-5 mt-10">Desaign</h2>
+                </div>
+                <!-- Skill Item -->
+                <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 px-4 mb-8">
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <div class="mb-4">
+                            <img src="/src/public/img/figma.png" alt="Figma" class="mx-auto w-16">
+                        </div>
+                        <h3 class="font-bold text-dark text-lg mb-3 text-center">Figma</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /Skills -->
+
+    <!-- Portfolio -->
+    <section id="portfolio" class="pt-36 pb-16 bg-slate-100">
+        <div class="container">
+            <div class="w-full px-4">
+                <div class="max-w-xl mx-auto text-center mb-16">
+                    <h4 class="text-base font-medium text-primary mb-2">Portfolio</h4>
+                    <h2 class="font-bold text-dark text-2xl lg:text-3xl mb-5">Latest Project</h2>
+                    <p class="font-normal text-secondary leading-relaxed">Here are some recent projects that
+                        I've been working on, including my own personal projects.</p>
+                </div>
+            </div>
+            <div class="w-full px-4 flex flex-wrap justify-center xl:w-10/12 xl:mx-auto">
+
+                <!-- ecommerce -->
+                <div class="mb-8 p-4 md:w-1/2">
+                    <div class="rounded-md shadow-md overflow-hidden">
+                        <img src="/src/public/img/Macbook-Air-shop.ilhamathallah.my.id (1).png" class="w-full" alt="">
+                    </div>
+                    <h3 class="font-bold text-dark text-lg lg:text-xl mt-5 mb-3 lg:pt-8">E commerce Web</h3>
+                    <div class="bg-red-500 w-24 rounded-xl">
+                        <p class="text-center font-bold text-white">
+                            Laravel
+                        </p>
+                    </div>
+                    <a href="https://shop.ilhamathallah.my.id/" class="text-primary underline" target="_blank">Live preview</a>
+                </div>
+                <!-- news -->
+                <div class="mb-8 p-4 md:w-1/2">
+                    <div class="rounded-md shadow-md overflow-hidden">
+                        <img src="/src/public/img/Macbook-Air-news.ilhamathallah.my.id (1).png" class="w-full" alt="">
+                    </div>
+                    <h3 class="font-bold text-dark text-lg lg:text-xl mt-5 mb-3 lg:pt-8">News Web</h3>
+                    <p class="font-normal text-secondary leading-relaxed"><a href="https://news.ilhamathallah.my.id/" class="text-primary underline"
+                            target="_blank">Live preview</a></p>
+                </div>
+                <!-- bootstrap -->
+                <div class="mb-8 p-4 md:w-1/2">
+                    <div class="rounded-md shadow-md overflow-hidden">
+                        <img src="/src/public/img/Macbook-Air-ilhamathallah.github.io (1).png" class="w-full" alt="">
+                    </div>
+                    <h3 class="font-bold text-dark text-lg lg:text-xl mt-5 mb-3 lg:pt-8">Astra Honda Web</h3>
+                    <div class="bg-red-500 w-28 rounded-xl">
+                        <p class="text-center font-bold text-white">
+                            Bootstrap
+                        </p>
+                    </div>
+                    <a href="https://ilhamathallah.github.io/Honda-x-Bootstrap/" class="text-primary underline" target="_blank">Live preview</a>
+                </div>
+                <!--  -->
+                <div class="mb-8 p-4 md:w-1/2">
+                    <div class="rounded-md shadow-md overflow-hidden">
+                        <img src="" class="w-full" alt="">
+                    </div>
+                    <h3 class="font-bold text-dark text-lg lg:text-xl mt-5 mb-3 lg:pt-8"></h3>
+                    <p class="font-normal text-secondary leading-relaxed"> <a href="" class="text-primary underline"
+                            target="_blank">Live preview</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /Portfolio -->
+
+    <!-- contact -->
+    <section id="kontak" class="pt-36 pb-32">
+        <div class="container">
+            <div class="w-full px-4">
+                <div class="max-w-xl mb-16">
+                    <h4 class="text-base font-medium text-primary mb-2">Contact</h4>
+                    <h2 class="font-bold text-dark text-2xl lg:text-3xl mb-5">Contact Me</h2>
+                    <p class="font-normal text-secondary mb-10 leading-relaxed">For collaboration, questions or
+                        job offers please fill out the message form below.</p>
+                </div>
+            </div>
+            <form action="https://formspree.io/f/xqkrwvdk" method="POST">
+                <div class="w-full lg:w-2/3">
+                    <!-- name -->
+                    <div class="w-full px-4 mb-8">
+                        <input type="text" id="name" placeholder="Name" name="name"
+                            class="text-base border-b w-full text-dark pb-3 focus:outline-none focus:border-primary">
+                    </div>
+                    <!-- email -->
+                    <div class="w-full px-4 mb-8">
+                        <input type="email" id="email" placeholder="Email" name="Email"
+                            class="text-base border-b w-full text-dark pb-3 focus:outline-none focus:border-primary">
+                    </div>
+                    <!-- subject -->
+                    <div class="w-full px-4 mb-8">
+                        <input type="text" id="subject" placeholder="subject" name="subject"
+                            class="text-base border-b w-full text-dark pb-3 focus:outline-none focus:border-primary">
+                    </div>
+                    <!-- message -->
+                    <div class="w-full px-4 mb-12">
+                        <textarea type="text" id="message" placeholder="message" name="Message"
+                            class="text-base border-b w-full text-dark pb-3 h-32 focus:outline-none focus:border-primary"></textarea>
+                    </div>
+                    <button type="submit" class="text-base font-semibold text-white bg-primary py-3 px-8 rounded-full hover:shadow-lg
+                        hover:opacity-90 transition duration-300 ease-in-out">Send Message
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+    <!-- /Contact -->
+
+    <!-- Footer -->
+    <footer class="bg-dark pt-24 pb-12">
+        <div class="container">
+            <!-- <div class="flex flex-wrap">
+                    <div class="w-full px-4 mb-12 text-slate-300 font-medium md:w-1/3">
+                        <h2 class="font-bold text-4xl text-white mb-5">Elfira Nurul Ilma</h2>
+                        <h3 class="font-bold text-2xl mb-2">Hubungi saya</h3>
+                        <p>elfiranurul02@gmail.com</p>
+                        <p>Jl. H. Ilyas, Air putih</p>
+                        <p>Bengkalis - Riau</p>
+                    </div>
+                    <div class="w-full px-4 mb-12 md:w-1/3">
+                        <h3 class="font-semibold text-xl text-white mb-5">Kategori tulisan</h3>
+                        <ul class="text-slate-300">
+                            <li><a href="#" class="inline-block text-base hover:text-primary mb-3">Programming</a></li>
+                            <li><a href="#" class="inline-block text-base hover:text-primary mb-3">Teknologi</a></li>
+                            <li><a href="#" class="inline-block text-base hover:text-primary mb-3">Gaya hidup</a></li>
+                        </ul>
+                    </div>
+                    <div class="w-full px-4 mb-12 md:w-1/3">
+                        <h3 class="font-semibold text-xl text-white mb-5">Tautan</h3>
+                        <ul class="text-slate-300">
+                            <li><a href="#" class="inline-block text-base hover:text-primary mb-3">Beranda</a></li>
+                            <li><a href="#" class="inline-block text-base hover:text-primary mb-3">Tentang saya</a></li>
+                            <li><a href="#" class="inline-block text-base hover:text-primary mb-3">Portfolio</a></li>
+                        </ul>
+                    </div>
+                </div> -->
+            <div class="w-full pt-4">
+                <div class="flex items-center justify-center mb-5">
+                    <!-- Youtube -->
+                    <a href="" target="_blank"
+                        class="w-10 h-10 mr-3 rounded-full flex justify-center items-center text-slate-300 border border-slate-300 hover:border-primary hover:bg-primary hover:text-white duration-300 ease-in-out">
+                        <i class='bx bxl-youtube fill-current text-2xl'></i>
+                    </a>
+                    <!-- Linkedin -->
+                    <a href="https://www.linkedin.com/in/ilham-athallah-741541284/" target="_blank"
+                        class="w-10 h-10 mr-3 rounded-full flex justify-center items-center text-slate-300 border border-slate-300 hover:border-primary hover:bg-primary hover:text-white duration-300 ease-in-out">
+                        <i class='bx bxl-linkedin fill-current text-2xl'></i>
+                    </a>
+                    <!-- Instagram -->
+                    <a href="https://www.instagram.com/" target="_blank"
+                        class="w-10 h-10 mr-3 rounded-full flex justify-center items-center text-slate-300 border border-slate-300 hover:border-primary hover:bg-primary hover:text-white duration-300 ease-in-out">
+                        <i class='bx bxl-instagram-alt fill-current text-2xl'></i>
+                    </a>
+                    <!-- Github -->
+                    <a href="" target="_blank"
+                        class="w-10 h-10 mr-3 rounded-full flex justify-center items-center text-slate-300 border border-slate-300 hover:border-primary hover:bg-primary hover:text-white duration-300 ease-in-out">
+                        <i class='bx bxl-github fill-current text-2xl'></i>
+                    </a>
+                </div>
+                <p class="text-slate-500 text-sm text-center">Dibuat dengan menggunakan <a href=""
+                        class="text-sky-500 font-medium">Tailwindcss</a></p>
+            </div>
+        </div>
+    </footer>
+    <!-- /Footer -->
+
+    <script src="dist/js/server.js"></script>
+    
+</body>
+
+</html>
